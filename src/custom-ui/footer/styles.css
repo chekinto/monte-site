@@ -1,0 +1,30 @@
+footer {
+  border-top: 1px solid #efefef;
+}
+
+.footer-sitemap {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.donate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.donate,
+.footer-sitemap,
+.footer-social {
+  border-top: 1px solid #efefef;
+  margin: 2rem 0;
+  padding: 2rem;
+}

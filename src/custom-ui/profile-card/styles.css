@@ -1,0 +1,41 @@
+.profile-card {
+  padding: 1rem;
+  border: 1px solid #f2f5f7;
+  background-color: white;
+  /* width: 20em; */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  h6 {
+    color: #2d314d;
+    margin-bottom: 1rem;
+  }
+
+  li {
+    font-size: 14px;
+  }
+}
+
+.avatar {
+  max-height: 20rem;
+  border-radius: 8px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.profile-content {
+}
+
+.teacher-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #f2f5f7;
+}

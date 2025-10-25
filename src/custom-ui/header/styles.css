@@ -1,0 +1,53 @@
+.header {
+  padding: 0 2rem;
+  border-bottom: 1px solid #efefef;
+  font-family: inherit;
+}
+
+.logo {
+  font-family: "Calistoga", serif;
+}
+
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: none;
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+.drawer-content {
+  padding: 0 0 1.5rem;
+}
+.drawer-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.trigger {
+  display: block;
+}
+
+@media (min-width: 678px) {
+  .trigger {
+    display: none;
+  }
+
+  .navbar {
+    display: block;
+  }
+}

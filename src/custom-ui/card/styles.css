@@ -1,0 +1,34 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid #efefef;
+  text-align: center;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 0.740973px 0.666876px -0.75px,
+    rgba(0, 0, 0, 0.06) 0px 2.01787px 1.81608px -1.5px,
+    rgba(0, 0, 0, 0.05) 0px 4.43051px 3.98745px -2.25px,
+    rgba(0, 0, 0, 0.04) 0px 9.83471px 8.85124px -3px,
+    rgba(0, 0, 0, 0.02) 0px 25px 22.5px -3.75px;
+
+  header {
+    padding: 2rem 0;
+    svg {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  p {
+    margin-bottom: none;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
