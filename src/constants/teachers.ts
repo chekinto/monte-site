@@ -6,13 +6,13 @@ import { StaticImageData } from 'next/image';
 export interface Teacher {
   heading: string;
   achievements: string[]
-  imgSrc: StaticImageData
+  imgSrc: string
 }
 
 export const myTeachers: Teacher[] = [
   {
     heading: 'Sal Monte (1936 - 2017)', 
-    imgSrc: salMonte,
+    imgSrc: "https://static.wixstatic.com/media/2e1ea9_e87469c13fb04f8d9d260a921d6bf18b~mv2.jpg/v1/crop/x_0,y_5,w_540,h_482/fill/w_312,h_276,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/12654701_10208716555333905_4915705662530.jpg",
     achievements: [
       "PGA life member",
       "Former tour player",
@@ -23,7 +23,7 @@ export const myTeachers: Teacher[] = [
   },
   {
     heading: '"Wild" Bill Mehlhorn (1898 - 1989)', 
-    imgSrc: billyMehlhorn,
+    imgSrc: "https://static.wixstatic.com/media/2e1ea9_e87469c13fb04f8d9d260a921d6bf18b~mv2.jpg/v1/crop/x_0,y_5,w_540,h_482/fill/w_312,h_276,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/12654701_10208716555333905_4915705662530.jpg",
     achievements: [
       "Pioneer of the PGA of America",
       "Came up with numerical system for numbering golf clubs",
@@ -37,7 +37,7 @@ export const myTeachers: Teacher[] = [
   },
   {
     heading: 'Joe "Roach" Delancey aka "Cowboy Joe" (1922 - 2002)', 
-    imgSrc: joeRoach,
+    imgSrc: "https://static.wixstatic.com/media/2e1ea9_e87469c13fb04f8d9d260a921d6bf18b~mv2.jpg/v1/crop/x_0,y_5,w_540,h_482/fill/w_312,h_276,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/12654701_10208716555333905_4915705662530.jpg",
     achievements: [
       "Renowned money player",
       "Pioneer of African American Golf",

@@ -1,0 +1,15 @@
+.blockquote-root {
+  border: 1px solid grey;
+  border-left-width: 0.5rem;
+  border-style: solid;
+  border-color: grey;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  padding: 1rem 1rem 1rem 2em;
+
+  li {
+    font-size: 14px;
+    list-style: inside;
+    margin-bottom: 0.5rem;
+  }
+}

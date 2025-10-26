@@ -1,4 +1,31 @@
-import { Button, Card, Separator } from "@chakra-ui/react";
+import { Button, Card, Separator, Table } from "@chakra-ui/react";
+import "./style.css";
+
+const items = [
+  { id: 1, time: "08:00am", session: "Introduction & Warm up" },
+  { id: 2, time: "09:00am", session: "9 Hole playing assessment" },
+  {
+    id: 3,
+    time: "12:00pm - 13:30pm",
+    session: "Driving Range: Full swing assessment",
+  },
+  {
+    id: 4,
+    time: "1:30pm - 14:30pm",
+    session: "Short Game: Chipping, pitching, bunker play",
+  },
+  { id: 5, time: "14:30pm - 15:00pm", session: "Break" },
+  {
+    id: 6,
+    time: "15:00pm - 16:00pm",
+    session: "Putting Green: Style, Reading greens",
+  },
+  {
+    id: 7,
+    time: "16:00pm - 17:00pm",
+    session: "Course Management: Mindset",
+  },
+];
 
 const lessonTypes = [
   {
@@ -27,15 +54,19 @@ const lessonTypes = [
 export default function InstructionPage() {
   return (
     <>
-      <h1>Instruction</h1>
-      <p>
-        Whether you&apos;re a beginner learning the fundamentals or a seasoned
-        player fine-tuning your swing, I offer a range of golf instruction
-        tailored to your goals and experience level. My mission is simple — to
-        help you play better, feel more confident on the course, and enjoy the
-        game you love.
-      </p>
-      <p>We offer a range of types of sessions to help you on your journey.</p>
+      <section className="section">
+        <h1>Instruction</h1>
+        <p>
+          Whether you&apos;re a beginner learning the fundamentals or a seasoned
+          player fine-tuning your swing, I offer a range of golf instruction
+          tailored to your goals and experience level. My mission is simple — to
+          help you play better, feel more confident on the course, and enjoy the
+          game you love.
+        </p>
+        <p>
+          We offer a range of types of sessions to help you on your journey.
+        </p>
+      </section>
 
       {lessonTypes.map(({ title, description, whoFor }) => (
         <Card.Root colorPalette="gray">
@@ -50,7 +81,7 @@ export default function InstructionPage() {
         </Card.Root>
       ))}
 
-      <section>
+      <section className="section">
         <h1>Start your journey</h1>
         <p>
           No two swings are alike and that’s why every program is built around
@@ -63,7 +94,27 @@ export default function InstructionPage() {
           golf yet.
         </p>
 
-        <Button colorPalette={"blue"}>Book now</Button>
+        <Button colorPalette={"blue"} margin={"0 auto"}>
+          Book now
+        </Button>
+      </section>
+
+      <section className="section full-bleed">
+        <h1>Player's Camp</h1>
+
+        <div className="players-camp">
+          <div className="players-card">
+            <div>
+              <h3>Monte's Golf</h3>
+              <p>3 Day Players Camp</p>
+              <p>Located at:</p>
+              <p>Chi Chi Rodriguez Golf Club</p>
+              <p>Clearwater, Florida</p>
+              <h4 className="players-camp-price">Only $995pp</h4>
+              <p>Limited to 4 players</p>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );

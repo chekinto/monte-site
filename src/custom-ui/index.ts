@@ -1,4 +1,5 @@
 
+export * from './block-quote';
 export * from './contact-form';
 export * from './footer';
 export * from './header';

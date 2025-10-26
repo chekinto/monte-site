@@ -1,20 +1,29 @@
-.profile-card {
-  padding: 1rem;
+.profile-root {
+  padding: 2rem 1rem;
   border: 1px solid #f2f5f7;
   background-color: white;
-  /* width: 20em; */
-  border-radius: 8px;
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 
   h6 {
     color: #2d314d;
-    margin-bottom: 1rem;
+  }
+  ul {
+    margin-left: 1rem;
   }
 
   li {
     font-size: 14px;
+    list-style: disc;
+  }
+
+  header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
   }
 }
 
@@ -31,6 +40,9 @@
 }
 
 .profile-content {
+  li {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .teacher-container {

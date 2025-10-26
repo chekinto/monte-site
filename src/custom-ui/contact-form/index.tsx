@@ -1,22 +1,9 @@
-import {
-  Button,
-  Field,
-  Fieldset,
-  Input,
-  NativeSelect,
-  Stack,
-} from "@chakra-ui/react";
+import { Button, Field, Fieldset, Input, Stack } from "@chakra-ui/react";
+import "./styles.css";
 
 export const ContactForm = () => {
   return (
-    <Fieldset.Root
-      invalid
-      size="lg"
-      maxW="md"
-      padding={"24px"}
-      borderRadius={8}
-      border={"1px solid #efefef"}
-    >
+    <Fieldset.Root invalid size="lg" maxW="md" className="root" padding={8}>
       <Stack>
         <Fieldset.Legend color={"black"}>Contact details</Fieldset.Legend>
         <Fieldset.HelperText>

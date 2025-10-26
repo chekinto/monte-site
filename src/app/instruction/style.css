@@ -1,0 +1,24 @@
+.players-camp {
+  padding: 2rem;
+  border: 1px solid #f2f5f7;
+  border-radius: 1rem;
+
+  div {
+    text-align: center;
+  }
+}
+
+h3,
+.players-camp-price {
+  font-size: 22px;
+}
+
+.players-card {
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid #f2f5f7;
+  margin-bottom: 2rem;
+  background-color: white;
+  width: 800;
+  margin: 0 auto 4rem;
+}

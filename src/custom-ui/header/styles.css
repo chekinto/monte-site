@@ -12,14 +12,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 5rem;
+  min-height: 4rem;
   max-width: 1280px;
   margin: 0 auto;
 }
 
 .navbar {
-  display: none;
-
   ul {
     display: flex;
     align-items: center;
@@ -31,6 +29,7 @@
 
 .drawer-content {
   padding: 0 0 1.5rem;
+  font-family: inherit;
 }
 .drawer-body {
   display: flex;
@@ -42,12 +41,22 @@
   display: block;
 }
 
-@media (min-width: 678px) {
-  .trigger {
-    display: none;
-  }
+.button {
+  background-color: #213d4d;
+  color: #efefef;
+}
 
+.button,
+.navbar {
+  display: none;
+}
+
+@media (min-width: 678px) {
+  .button,
   .navbar {
     display: block;
+  }
+  .trigger {
+    display: none;
   }
 }

@@ -8,7 +8,7 @@ import shotmaker from "../../assets/shotmaker.jpg";
 
 export const Marquee = () => {
   return (
-    <section className="root full-bleed">
+    <section className="marquee-root full-bleed">
       <M autoFill gradient speed={30}>
         <div style={{ marginInline: 24 }}>
           <Image src={chichi} alt="chi chi range" width={100} height={48} />

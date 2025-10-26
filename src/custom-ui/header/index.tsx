@@ -67,9 +67,7 @@ export const Header = () => {
               ))}
             </ul>
           </nav>
-          <Button backgroundColor="#213D4D" color={"white"}>
-            Book Lesson
-          </Button>
+          <Button className="button">Book Lesson</Button>
 
           <Drawer.Trigger asChild className="trigger">
             <IconButton>

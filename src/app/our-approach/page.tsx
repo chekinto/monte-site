@@ -1,3 +1,4 @@
+import { BlockQuote } from "@/custom-ui";
 import { AspectRatio } from "@chakra-ui/react";
 import { Metadata } from "next";
 
@@ -59,7 +60,7 @@ export default function OurApproachPage() {
         misconceptions and lesson tee clichés. Here are a few of them:
       </p>
 
-      <div>
+      <BlockQuote>
         <h2>Common things I hear in lessons</h2>
         <ul>
           <li>Keep your left arm straight"</li>
@@ -79,7 +80,7 @@ export default function OurApproachPage() {
           <li>Shallow</li>
           <li>Trail this, Trail that</li>
         </ul>
-      </div>
+      </BlockQuote>
 
       <p>
         These concepts and swing thoughts will cripple your ability to ever have
