@@ -80,8 +80,8 @@ export const Footer = () => {
         </div>
 
         <div className="footer-social">
-          {socialLinks.map(({ href, icon }) => (
-            <a href={href} target="_blank">
+          {socialLinks.map(({ href, icon }, index) => (
+            <a key={`${href}-${index}`} href={href} target="_blank">
               {icon}
             </a>
           ))}
@@ -90,6 +90,12 @@ export const Footer = () => {
         <div className="copy-right">
           <p>&copy; Monte's Golf. All Rights Reserved</p>
         </div>
+      </div>
+
+      <div className="copy-right">
+        <p>
+          Made with passion by <a href="/">Che </a>
+        </p>
       </div>
     </footer>
   );

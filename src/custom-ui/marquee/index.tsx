@@ -10,16 +10,16 @@ export const Marquee = () => {
   return (
     <section className="marquee-root full-bleed">
       <M autoFill gradient speed={30}>
-        <div style={{ marginInline: 24 }}>
+        <div className="marquee-item ">
           <Image src={chichi} alt="chi chi range" width={100} height={48} />
         </div>
-        <div style={{ marginInline: 24 }}>
+        <div className="marquee-item ">
           <Image src={laGolf} alt="chi chi range" width={100} height={48} />
         </div>
-        <div style={{ marginInline: 24 }}>
+        <div className="marquee-item ">
           <Image src={scimera} alt="chi chi range" width={100} height={48} />
         </div>
-        <div style={{ marginInline: 24 }}>
+        <div className="marquee-item ">
           <Image src={shotmaker} alt="chi chi range" width={100} height={48} />
         </div>
       </M>

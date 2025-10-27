@@ -1,5 +1,6 @@
 export const ROUTES = [
-  {path: '/', 
+  {
+    path: '/', 
     label: 'Home'
   },
   {
@@ -13,6 +14,10 @@ export const ROUTES = [
   {
     path: '/instruction', 
     label: 'Instruction'
+  },
+  {
+    path: '/players-camp', 
+    label: 'Players Camp'
   },
   {
     path: '/contact-us', 

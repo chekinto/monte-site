@@ -1,4 +1,14 @@
-import { Button, Card, Separator, Table } from "@chakra-ui/react";
+import {
+  Button,
+  Card,
+  Field,
+  Fieldset,
+  Input,
+  Separator,
+  Stack,
+  Table,
+  Textarea,
+} from "@chakra-ui/react";
 import "./style.css";
 
 const items = [
@@ -68,7 +78,52 @@ export default function InstructionPage() {
         </p>
       </section>
 
-      {lessonTypes.map(({ title, description, whoFor }) => (
+      <section className="section">
+        <h1>1-2-1 Lessons</h1>
+        <p>
+          Tailored 1 on 1 training sessions at The Chi Chis Rodriguez Golf Club
+          in Clearwater Florida. From beginners to professionals, covering the
+          effortless golf swing based on the principals of Wild" Bill Mehlhorn
+          and Sal Monte, short game skills, course strategies, specialty shots
+          and mindset training, from a lineage of Tour and "Money Player"
+          professionals.
+        </p>
+
+        <div>
+          <h3>Time Tested Information</h3>
+          <p>
+            Receive guidance and coaching from a seasoned professional that has
+            100 years of knowledge to share from his 25 YR mentor, the legendary
+            "Wild" Bill Mehlhorn , His father Sal Monte, and Mikes lifetime of
+            Competitive golf that spans over 50 years itself. All at the Chi Chi
+            Rodriguez Golf Club and Driving Range. See why some of the greatest
+            champions in history trusted Mr. Mehlhorn and Sal Monte with their
+            game.
+          </p>
+        </div>
+        <div>
+          <h3>Comprehensive Training</h3>
+          <p>
+            Comprehensive training designed to enhance your performance on the
+            course. Develop a solid foundation, Refine your fundamentals, Stop
+            playing swing and start playing golf and gain a competitive edge
+            under the guidance of a seasoned professional that has 3 generations
+            of knowledge to share.
+          </p>
+        </div>
+        <div>
+          <h3>Specialized Instruction</h3>
+          <p>
+            Specialized instruction tailored to meet your specific needs and
+            goals. Whether your just starting to build a swing or just wanting
+            to polish your existing action, sharpen your short game, or enhance
+            your mental approach... my training caters to all skill levels from
+            beginners to accomplished competitors and professionals.
+          </p>
+        </div>
+      </section>
+
+      {/* {lessonTypes.map(({ title, description, whoFor }) => (
         <Card.Root colorPalette="gray">
           <Card.Header>
             <h3>{title}</h3>
@@ -79,7 +134,63 @@ export default function InstructionPage() {
             <p>{whoFor}</p>
           </Card.Body>
         </Card.Root>
-      ))}
+      ))} */}
+
+      <section className="section">
+        <h1>Video Analysis</h1>
+        <p>
+          Send me your video through{" "}
+          <a
+            href="https://www.snead.app/coach/michael-mangiaracina-2"
+            target="_blank"
+          >
+            Snead.app
+          </a>{" "}
+          to get started for as little as $29. Tap link below to explore student
+          options.
+        </p>
+
+        <h4>Beginners to professionals</h4>
+        <ol>
+          <li>
+            Send me a video of your golf swing from directly behind you, on the
+            target line, your profile.
+          </li>
+          <li>
+            Send another from facing you directly in line with your ball
+            position. (This goes for short shots and putting too)
+          </li>
+          <li>
+            I will review, critique and send back by your preferred method of
+            communication, by phone or video, and review with you not just what
+            your doing wrong, but I will give you the cause of the error and
+            explain & demonstrate a drill to fix it.
+          </li>
+        </ol>
+
+        <p>
+          Drills are necessary because even though you and I may understand the
+          explanation, your muscles act independent of your conviction and
+          require retraining in many instances. Also, these changes should take
+          place with as little as possible mental direction to avoid the dreaded
+          paralysis by analysis syndrome. This wipes out any chance of achieving
+          fluidity and takes away from the objective of having the muscles
+          performing under duress without thought. The mind should bee free to
+          focus on flight execution and that's it.​
+        </p>
+
+        <Button>Snead App</Button>
+      </section>
+
+      <section className="section">
+        {lessonTypes.map(({ title, description, whoFor }) => (
+          <div>
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <p>{whoFor}</p>
+          </div>
+        ))}
+      </section>
 
       <section className="section">
         <h1>Start your journey</h1>
@@ -94,7 +205,7 @@ export default function InstructionPage() {
           golf yet.
         </p>
 
-        <Button colorPalette={"blue"} margin={"0 auto"}>
+        <Button colorPalette={"blue"} margin={"0px auto"} display={"block"}>
           Book now
         </Button>
       </section>
@@ -114,6 +225,47 @@ export default function InstructionPage() {
               <p>Limited to 4 players</p>
             </div>
           </div>
+        </div>
+
+        <div>
+          <h1>Get in Touch</h1>
+
+          <Fieldset.Root padding={8}>
+            <Fieldset.Legend color={"black"}>Contact details</Fieldset.Legend>
+            <Fieldset.HelperText>
+              Tell me a little bit more about yourself and I'll get back to you
+              as soon as possible.
+            </Fieldset.HelperText>
+
+            <Fieldset.Content>
+              <Field.Root>
+                <Field.Label>Name</Field.Label>
+                <Input name="name" />
+              </Field.Root>
+              <Field.Root>
+                <Field.Label>Contact number</Field.Label>
+                <Input name="phone" />
+              </Field.Root>
+
+              <Field.Root>
+                <Field.Label>Email address</Field.Label>
+                <Input name="email" type="email" />
+              </Field.Root>
+              <Field.Root>
+                <Field.Label>Message</Field.Label>
+                <Textarea name="message" />
+              </Field.Root>
+            </Fieldset.Content>
+
+            <Button
+              type="submit"
+              alignSelf="flex-start"
+              colorPalette="blue"
+              mt={8}
+            >
+              Submit
+            </Button>
+          </Fieldset.Root>
         </div>
       </section>
     </>

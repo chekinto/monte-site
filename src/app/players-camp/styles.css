@@ -1,0 +1,49 @@
+.itinerary__container {
+  border: 1px solid #efefef;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.itinerary__day {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.camp__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 1rem;
+  background-color: white;
+  margin: 2rem 0;
+}
+
+.camp__pricing {
+  font-size: 2.5rem;
+  color: black;
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+.itinerary__table {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #efefef;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+  .time {
+    font-weight: bold;
+    min-width: 200px;
+    margin: 0;
+  }
+
+  .session {
+    flex: 1;
+    margin: 0;
+  }
+}

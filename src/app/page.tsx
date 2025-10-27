@@ -2,6 +2,9 @@ import { Marquee, Hero } from "@/custom-ui";
 import { Metadata } from "next";
 import { GrTarget } from "react-icons/gr";
 import "../custom-ui/card/styles.css";
+import { Card } from "@/custom-ui/card";
+import { testimonials } from "@/constants";
+import { Testimonial } from "@/custom-ui/testimonial";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -10,19 +13,19 @@ export const metadata: Metadata = {
 
 const features = [
   {
-    icon: GrTarget,
+    icon: <GrTarget />,
     title: "🎯 Tailored Coaching",
     description:
       "Personalized lesson plans designed to match your goals, skill level, and playing style. Every golfer learns differently, that’s why our sessions focus on what truly matters to your game, ensuring steady progress and lasting improvement both on and off the course..",
   },
   {
-    icon: GrTarget,
+    icon: <GrTarget />,
     title: "🎯 Modern Technique",
     description:
       "We blend timeless fundamentals with cutting-edge technology. Using high-speed video, digital swing analysis, and data-driven insights, we help you understand your swing like never before, combining the art of traditional coaching with the precision of modern tools.",
   },
   {
-    icon: GrTarget,
+    icon: <GrTarget />,
     title: "🎯 Game Transformation",
     description:
       "Transform your game through a structured, results-focused approach. Our goal is to help you build confidence, consistency, and control — from tee to green. Whether you’re chasing lower scores or rediscovering the joy of the game, we’ll guide you every step of the way.",
@@ -55,13 +58,7 @@ export default function Root() {
           <h1>Our approach</h1>
           <div className="grid-container">
             {features.map((feature, index) => (
-              <div key={index} className="card">
-                <header>
-                  <feature.icon strokeWidth={1.5} />
-                </header>
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
-              </div>
+              <Card key={feature.title + index} {...feature} />
             ))}
           </div>
         </div>
@@ -94,47 +91,22 @@ export default function Root() {
         </p>
       </section>
 
-      {/* <section>
-        <h1>FAQS</h1>
-        <Accordion.Root collapsible>
-          <Accordion.Item value={"value-1"}>
-            <Accordion.ItemTrigger>
-              <span>Quesiton 1</span>
-              <Accordion.ItemIndicator />
-            </Accordion.ItemTrigger>
-            <Accordion.ItemContent>
-              <Accordion.ItemBody>Answer </Accordion.ItemBody>
-            </Accordion.ItemContent>
-          </Accordion.Item>
-          <Accordion.Item value={"value-2"}>
-            <Accordion.ItemTrigger>
-              <span>Quesiton 1</span>
-              <Accordion.ItemIndicator />
-            </Accordion.ItemTrigger>
-            <Accordion.ItemContent>
-              <Accordion.ItemBody>Answer </Accordion.ItemBody>
-            </Accordion.ItemContent>
-          </Accordion.Item>
-          <Accordion.Item value={"value-3"}>
-            <Accordion.ItemTrigger>
-              <span>Quesiton 1</span>
-              <Accordion.ItemIndicator />
-            </Accordion.ItemTrigger>
-            <Accordion.ItemContent>
-              <Accordion.ItemBody>Answer </Accordion.ItemBody>
-            </Accordion.ItemContent>
-          </Accordion.Item>
-          <Accordion.Item value={"value-4"}>
-            <Accordion.ItemTrigger>
-              <span>Quesiton 1</span>
-              <Accordion.ItemIndicator />
-            </Accordion.ItemTrigger>
-            <Accordion.ItemContent>
-              <Accordion.ItemBody>Answer </Accordion.ItemBody>
-            </Accordion.ItemContent>
-          </Accordion.Item>
-        </Accordion.Root>
-      </section> */}
+      <section className="section">
+        <p>
+          Take a moment to think about the movements your body makes in nearly
+          every athletic activity, chances are, you already possess the natural
+          motion needed for a great golf swing.
+        </p>
+      </section>
+
+      <section>
+        <h1>Testimonials</h1>
+        <h3 style={{ textAlign: "center" }}>What my students say</h3>
+
+        {testimonials.map((testimonial) => (
+          <Testimonial {...testimonial} />
+        ))}
+      </section>
     </>
   );
 }

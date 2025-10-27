@@ -1,8 +1,3 @@
-import salMonte from '../assets/sal-monte-profile.jpg'
-import billyMehlhorn  from '../assets/bill-mehlhorn-profile.jpg'
-import joeRoach  from '../assets/joe-roach-delancey-profile.jpg'
-import { StaticImageData } from 'next/image';
-
 export interface Teacher {
   heading: string;
   achievements: string[]

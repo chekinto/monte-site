@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import {
   Button,
@@ -8,50 +9,16 @@ import {
   Separator,
 } from "@chakra-ui/react";
 import { FiAlignRight } from "react-icons/fi";
-import {
-  AiOutlineTikTok,
-  AiOutlineInstagram,
-  AiOutlineYoutube,
-} from "react-icons/ai";
 import "./styles.css";
-import { ROUTES } from "@/constants/routes";
-
-const socialLinks = [
-  {
-    href: "http://google.com",
-    icon: (
-      <AiOutlineTikTok
-        color={"var(--bg-primary)"}
-        aria-label="tiktok"
-        size={"var(--icon-sm)"}
-      />
-    ),
-  },
-  {
-    href: "http://google.com",
-    icon: (
-      <AiOutlineInstagram
-        color={"var(--bg-primary)"}
-        aria-label="instagram"
-        size={"var(--icon-sm)"}
-      />
-    ),
-  },
-  {
-    href: "http://google.com",
-    icon: (
-      <AiOutlineYoutube
-        color={"var(--bg-primary)"}
-        aria-label="instagram"
-        size={"var(--icon-sm)"}
-      />
-    ),
-  },
-];
+import { socialLinks, ROUTES } from "@/constants";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export const Header = () => {
+  const [open, setOpen] = useState(false);
+  const router = useRouter();
   return (
-    <Drawer.Root>
+    <Drawer.Root open={open} onOpenChange={(e) => setOpen(e.open)}>
       <header className="header">
         <div className="headerInner">
           <Link className="logo" href="/">
@@ -61,7 +28,7 @@ export const Header = () => {
           <nav className="navbar">
             <ul>
               {ROUTES.map(({ path, label }) => (
-                <li key={label}>
+                <li key={label} className="nav-link">
                   <Link href={path}>{label}</Link>
                 </li>
               ))}
@@ -87,8 +54,15 @@ export const Header = () => {
             <Drawer.Body>
               <div className="drawer-body">
                 {ROUTES.map(({ path, label }) => (
-                  <li>
-                    <Link href={path}>{label}</Link>
+                  <li key={path}>
+                    <a
+                      onClick={() => {
+                        router.push(path);
+                        setOpen(false);
+                      }}
+                    >
+                      {label}
+                    </a>
                   </li>
                 ))}
               </div>
